@@ -11,7 +11,7 @@ app.use(express.json());
 
 const genAI = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
-app.post("/chat", async (req, res) => {
+app.post("/", async (req, res) => {
   const { history } = req.body;
 
   try {
